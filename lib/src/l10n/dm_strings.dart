@@ -19,8 +19,7 @@ class DmStrings {
     this.uploadTooltip = 'Upload history to server',
     this.downloadTooltip = 'Download history from server',
     this.syncTooltip = 'Sync from server',
-    this.uploadSuccess =
-        'Uploaded. Download on another device within 1 hour.',
+    this.uploadSuccess = 'Uploaded. Download on another device within 1 hour.',
     this.uploadFailed = 'Upload failed',
     this.syncSuccess = 'Chat history synced',
     this.downloadNoData =
@@ -67,9 +66,7 @@ class DmStrings {
       uploadSuccess: s('Uploaded. Download on another device within 1 hour.'),
       uploadFailed: s('Upload failed'),
       syncSuccess: s('Chat history synced'),
-      downloadNoData: s(
-        'No data available (upload from another device first)',
-      ),
+      downloadNoData: s('No data available (upload from another device first)'),
       downloadFailed: s('Download failed'),
     );
   }

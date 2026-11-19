@@ -225,8 +225,9 @@ class _DmPageState extends State<DmPage> {
                   )
                 : const Icon(Icons.upload),
             tooltip: _s.uploadTooltip,
-            onPressed:
-                (_uploading || _downloading || _syncing) ? null : _uploadSync,
+            onPressed: (_uploading || _downloading || _syncing)
+                ? null
+                : _uploadSync,
           ),
           IconButton(
             icon: _downloading
@@ -237,8 +238,7 @@ class _DmPageState extends State<DmPage> {
                   )
                 : const Icon(Icons.download),
             tooltip: _s.downloadTooltip,
-            onPressed:
-                (_uploading || _downloading || _syncing)
+            onPressed: (_uploading || _downloading || _syncing)
                 ? null
                 : _downloadSync,
           ),
