@@ -1,0 +1,13 @@
+name: user_social_system
+description: Reusable direct-message contracts and widgets used by Taiwan Brawl.
+version: 0.1.0
+publish_to: none
+environment:
+  sdk: ^3.11.1
+dependencies:
+  flutter:
+    sdk: flutter
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
