@@ -65,9 +65,11 @@ class RoomInviteItem {
     required this.roomCode,
     required this.createdAt,
     required this.inviter,
+    this.gameId = 'game.mini-royale',
   });
 
   final int id;
+  final String gameId;
   final String roomCode;
   final String createdAt;
   final SocialUser inviter;
@@ -78,6 +80,7 @@ class RoomInviteItem {
   }) {
     return RoomInviteItem(
       id: (json['id'] as num).toInt(),
+      gameId: json['gameId'] as String? ?? 'game.mini-royale',
       roomCode: json['roomCode'] as String? ?? '',
       createdAt: json['createdAt'] as String? ?? '',
       inviter: SocialUser.fromJson(
@@ -176,14 +179,20 @@ class FriendSearchResult {
 }
 
 class RoomInviteActionResult {
-  const RoomInviteActionResult({required this.status, required this.roomCode});
+  const RoomInviteActionResult({
+    required this.status,
+    required this.roomCode,
+    this.gameId = 'game.mini-royale',
+  });
 
   final String status;
+  final String gameId;
   final String roomCode;
 
   factory RoomInviteActionResult.fromJson(Map<String, dynamic> json) {
     return RoomInviteActionResult(
       status: json['status'] as String? ?? '',
+      gameId: json['gameId'] as String? ?? 'game.mini-royale',
       roomCode: json['roomCode'] as String? ?? '',
     );
   }

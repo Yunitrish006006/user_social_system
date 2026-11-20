@@ -10,7 +10,7 @@ void main() {
         {'id': 1, 'user': user},
       ],
       'roomInvites': [
-        {'id': 2, 'roomCode': 'TEST', 'inviter': user},
+        {'id': 2, 'gameId': 'game.other', 'roomCode': 'TEST', 'inviter': user},
       ],
     }, resolveAvatar: (url) => 'https://example.test$url');
     expect(
@@ -26,6 +26,12 @@ void main() {
       'https://example.test/avatar.png',
     );
     expect(overview.outgoingRequests, isEmpty);
+    expect(overview.roomInvites.single.gameId, 'game.other');
+    expect(RoomInviteActionResult.fromJson({}).gameId, 'game.mini-royale');
+    expect(
+      RoomInviteActionResult.fromJson({'gameId': 'game.other'}).gameId,
+      'game.other',
+    );
     expect(FriendsDirectory, isA<Type>());
   });
 }
